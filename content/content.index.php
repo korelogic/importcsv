@@ -174,7 +174,7 @@ class contentExtensionImportcsvIndex extends AdministrationPage
         $this->__addVar('section-id', $sectionID);
         $this->__addVar('unique-action', $uniqueAction);
         $this->__addVar('unique-field', $uniqueField);
-        $this->__addVar('import-url', URL.'/extension/importcsv/');
+        $this->__addVar('import-url', URL . '/symphony/extension/importcsv/');
 
         // Output the CSV-data:
         $csvData = $csv->data;
@@ -191,7 +191,7 @@ class contentExtensionImportcsvIndex extends AdministrationPage
         }
         $this->__addVar('field-ids', implode(',', $ids));
 
-        $this->addScriptToHead(URL . '/extension/importcsv/assets/import.js');
+        $this->addScriptToHead(URL . '/extensions/importcsv/assets/import.js');
         $this->Form->appendChild(new XMLElement('h2', __('Import in progress...')));
         $this->Form->appendChild(new XMLElement('div', '<div class="bar"></div>', array('class' => 'progress')));
         $this->Form->appendChild(new XMLElement('div', null, array('class' => 'console')));
